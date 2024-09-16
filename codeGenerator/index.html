@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Generator and Matching</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+
+    <header>
+        <h2 id="yellowH" style="color: yellow;"></h2>
+        <h2 id="greenH" style="color: green;"></h2>
+        <h2 id="redH" style="color: red;"></h2>
+    </header>
+
+    <main>
+        <section class="codeGen">
+            <input type="text" id="createCode" readonly>
+            <button onclick="generateCode()">Generate Code</button>
+        </section>
+
+        <section class="codeMat">
+            <div class="cheakCode">
+                <input type="text" readonly id="codeInp">
+            </div>
+            <div class="numbAct">
+                <table>
+                    <thead>
+                        <tr>
+                            <td><button onclick="numberValue('7')">7</button></td>
+                            <td><button onclick="numberValue('8')">8</butto></td>
+                            <td><button onclick="numberValue('9')">9</button></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><button onclick="numberValue('4')">4</button></td>
+                            <td><button onclick="numberValue('5')" >5</button></td>
+                            <td><button onclick="numberValue('6')" >6</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="numberValue('1')" class="one">1</button></td>
+                            <td><button onclick="numberValue('2')">2</button></td>
+                            <td><button onclick="numberValue('3')">3</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="clearInput()" style="background-color:red;" >C</button></td>
+                            <td><button onclick="numberValue('0')">0</button></td>
+                            <td><button onclick="oneItemClear()" style="background-color: rgb(20, 193, 216);" class="fa-solid fa-circle-chevron-left" ></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="submitCode">
+                <button onclick="codeMatcher()">SUBMIT CODE</button>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculater</title>
+
+    <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                outline: none;
+                border: none;
+            }
+
+            body{
+                background-color: #000001;
+                color: aliceblue;
+                width: 100%;
+                height: 100vh;
+            }
+
+            .calc{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+             .calc h1{
+                font-size: 2.3rem;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-style: italic;
+                color: #cecb0e;
+                margin: 2rem;
+             }
+
+            .calcBody{
+                background-color: #dfdfec4d;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            table{
+                border: 1px rgb(0, 0, 0) solid;
+            }
+
+
+            .calcinp input{
+                width: 20.5rem;
+                height: 4rem;
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-align: right;
+                border: 1px rgb(60, 255, 0) solid;
+                border-radius: .4rem;
+                padding: .3rem;
+            }
+
+            button{
+                font-size: 1.5rem;
+                height: 4rem;
+                width: 4rem;
+                margin: .5rem;
+                font-weight: bold;
+                padding:.5rem .8rem;
+                background-color: rgb(54, 9, 95);
+                color: aliceblue;
+                border-radius: .4rem;
+                cursor: pointer;
+            }
+            button:focus{
+                background-color: hotpink;
+            }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="calc">
+        <h1>JavaScript Calculater</h1>
+        <div class="calcBody">
+            <div class="calcinp">
+                <input type="text" readonly placeholder="0000000000000000000" id="display">
+            </div>
+            <div class="calcAct">
+                <table>
+                    <thead>
+                        <tr>
+                            <td><button onkeypress="numberKey()" onclick="numberValue('7')">7</button></td>
+                            <td><button onclick="numberValue('8')">8</butto></td>
+                            <td><button onclick="numberValue('9')">9</button></td>
+                            <td><button onclick="numberValue('/')" style="background-color: rgb(75, 128, 1);" >/</button></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><button onclick="numberValue('4')">4</button></td>
+                            <td><button onclick="numberValue('5')" >5</button></td>
+                            <td><button onclick="numberValue('6')" >6</button></td>
+                            <td><button onclick="numberValue('*')" style="background-color: rgb(75, 128, 1);" >X</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="numberValue('1')" class="one">1</button></td>
+                            <td><button onclick="numberValue('2')">2</button></td>
+                            <td><button onclick="numberValue('3')">3</button></td>
+                            <td><button onclick="numberValue('-')" style="background-color: rgb(75, 128, 1);" >-</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="clearInput()" style="background-color:red;" >C</button></td>
+                            <td><button onclick="numberValue('0')">0</button></td>
+                            <td><button onclick="equal()" style="background-color: green;" >=</button></td>
+                            <td><button onclick="numberValue('+')" style="background-color: rgb(75, 128, 1);" >+</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
